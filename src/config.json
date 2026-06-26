@@ -3,5 +3,5 @@
     "VERILOG_FILES": "dir::src/*.v",
     "CLOCK_PORT": "clk",
     "CLOCK_PERIOD": 40,
-    "FALLBACK_SDC": "dir::biorle1.sdc"
+    "PL_TARGET_DENSITY": 0.45
 }
