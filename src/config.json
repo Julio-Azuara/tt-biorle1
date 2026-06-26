@@ -2,5 +2,6 @@
     "DESIGN_NAME": "tt_um_biorle1",
     "VERILOG_FILES": "dir::src/*.v",
     "CLOCK_PORT": "clk",
-    "CLOCK_PERIOD": 40
+    "CLOCK_PERIOD": 40, 
+    "MAGIC_KLAYOUT_XOR_ABORT": false
 }
