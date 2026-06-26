@@ -241,7 +241,7 @@ module biorle1_spi_rx (
     // both be high in the same clock cycle.
     // =========================================================================
 
-    wire frame_complete = negedge_sck & (bit_count == 7'd71) & ~cs_n_sync;
+    
     wire frame_error    = posedge_cs_n & (bit_count != 7'd71) & frame_active;
 
     // =========================================================================
@@ -437,6 +437,11 @@ module biorle1_spi_rx (
 
         end  // end else (not in reset)
     end  // end always
+
+    // STATUS word bits [71:48] are intentionally discarded per ADS1292R protocol.
+    // Bit 71 (STATUS[23], the MSB) is written by the shift operation but never read.
+    // This wire prevents a Verilator UNUSEDSIGNAL warning without affecting synthesis.
+    wire _unused_ok = shift_reg[71];
 
 endmodule
 // =============================================================================
