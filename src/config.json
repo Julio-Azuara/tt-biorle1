@@ -7,5 +7,7 @@
     "DIE_AREA": "0 0 161.00 111.52",
     "RT_MAX_LAYER": "met4",
     "DESIGN_IS_CORE": false,
+    "PNR_SDC_FILE": "dir::biorle1.sdc",
+    "SIGNOFF_SDC_FILE": "dir::biorle1.sdc",
     "ERROR_ON_XOR_ERROR": false
 }
